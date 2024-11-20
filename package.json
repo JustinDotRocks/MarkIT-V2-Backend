@@ -1,0 +1,31 @@
+{
+	"name": "MarkIT-V2-Backend",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "src/index.d.ts",
+	"repository": "https://github.com/JustinDotRocks/MarkIT-V2-Backend.git",
+	"author": "JustinDotRocks <justins192107@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.1",
+		"knex": "^3.1.0",
+		"mysql2": "^3.11.4"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0",
+		"@types/knex": "^0.16.1",
+		"@types/node": "^22.9.0",
+		"nodemon": "^3.1.7",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.3"
+	},
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "nodemon src/server.ts",
+		"build": "tsc",
+		"migrate": "knex migrate:latest",
+		"seed": "knex seed:run"
+	}
+}
